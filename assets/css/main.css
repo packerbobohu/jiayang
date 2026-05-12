@@ -64,9 +64,24 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
+  background:
+    radial-gradient(circle at top left,
+      rgba(86, 194, 113, 0.1) 0%,
+      rgba(255,255,255,1) 38%),
+
+    radial-gradient(circle at bottom right,
+      rgba(31,143,85,0.08) 0%,
+      rgba(255,255,255,1) 42%),
+
+    linear-gradient(
+      135deg,
+      #f4fbf6 0%,
+      #ffffff 45%,
+      #f7fcf8 100%
+    );
+
+  background-attachment: fixed;
+  color: #4b5563;
 }
 
 a {
@@ -825,22 +840,45 @@ section,
 }
 
 .hero .hero-cta .btn-primary {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  /* background-color: var(--accent-color);
+  color: var(--contrast-color); */
   padding: 14px 32px;
   border-radius: 6px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
   border: none;
-  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%);
+background:
+    linear-gradient(
+      135deg,
+      #1f8f55 0%,
+      #39b86c 100%
+    );
+
+  border: none;
+  color: #fff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 30px rgba(31,143,85,0.25);
+
+  transition: all .35s ease;
+
+  /* box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%); */
 }
 
 .hero .hero-cta .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+    transform: translateY(-3px);
+
+  box-shadow:
+    0 20px 50px rgba(31,143,85,0.35);
+  
 }
+
+
+
 
 .hero .hero-cta .btn-secondary {
   color: var(--heading-color);
@@ -4177,4 +4215,110 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* =========================================
+   Eco Tech Gradient Background
+========================================= */
+
+body {
+
+  background:
+
+    /* 左上绿色柔光 */
+    radial-gradient(
+      circle at top left,
+      rgba(86,194,113,0.12) 0%,
+      rgba(255,255,255,0) 38%
+    ),
+
+    /* 右下绿色柔光 */
+    radial-gradient(
+      circle at bottom right,
+      rgba(31,143,85,0.08) 0%,
+      rgba(255,255,255,0) 42%
+    ),
+
+    /* 主渐变背景 */
+    linear-gradient(
+      135deg,
+      #f4fbf6 0%,
+      #ffffff 45%,
+      #f7fcf8 100%
+    );
+
+  background-attachment: fixed;
+
+  color: #4b5563;
+}
+
+/* =========================================
+   Hero Green Gradient
+========================================= */
+
+.hero {
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eefaf1 0%,
+      #ffffff 62%
+    );
+}
+
+/* 绿色科技光晕 */
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  /* width: 700px;
+  height: 700px; */
+
+  /* top: -220px;
+  right: -180px; */
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(86,194,113,0.18) 0%,
+      rgba(86,194,113,0.04) 35%,
+      transparent 70%
+    );
+
+  z-index: 0;
+}
+
+/* 左下辅助柔光 */
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+   width: 500px;
+  height: 500px;
+
+  left: -120px;
+  bottom: -180px; 
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(31,143,85,0.10) 0%,
+      transparent 70%
+    );
+
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
