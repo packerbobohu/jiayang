@@ -45,22 +45,21 @@
   </a>
 
   <!-- 微信 -->
-
-  <div class="service-item wechat-box">
-
+<!-- 
+  <div class="service-item wechat-box" onclick="toggleWechat()">
     <i class="bi bi-wechat"></i>
 
     <span>微信咨询</span>
 
     <div class="wechat-popup">
 
-      <img src="assets/img/wechat.jpg" alt="微信二维码">
+      <img src="assets/img/wechat (1).jpg" alt="微信二维码">
 
       <p>扫码添加微信</p>
 
     </div>
 
-  </div>
+  </div> -->
 
   <!-- 返回顶部 -->
 
@@ -73,6 +72,31 @@
   </a>
 
 </div>
+<script>
+
+function toggleWechat() {
+
+  const popup = document.querySelector('.wechat-popup');
+
+  popup.classList.toggle('show');
+}
+
+/* 点击页面其它区域关闭 */
+
+document.addEventListener('click', function(e) {
+
+  const wechatBox = document.querySelector('.wechat-box');
+
+  if (!wechatBox.contains(e.target)) {
+
+    document
+      .querySelector('.wechat-popup')
+      .classList.remove('show');
+  }
+
+});
+
+</script>
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">

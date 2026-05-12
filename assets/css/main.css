@@ -4621,3 +4621,35 @@ body {
   }
 
 }
+
+.wechat-popup.show {
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+  transform: translateY(0) !important;
+}
+
+.wechat-popup {
+
+  z-index: 999999;
+}
+
+.floating-service {
+
+  overflow: visible !important;
+}
+
+.wechat-popup img {
+
+  width: 160px;
+
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  border-radius: 12px;
+}
