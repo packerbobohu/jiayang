@@ -4322,3 +4322,99 @@ body {
   position: relative;
   z-index: 2;
 }
+/* =========================================
+   Floating Phone Button
+========================================= */
+
+.floating-phone {
+
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1f8f55 0%,
+      #39b86c 100%
+    );
+
+  color: #fff;
+
+  border-radius: 60px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 30px rgba(31,143,85,0.28);
+
+  transition: all .35s ease;
+
+  text-decoration: none;
+
+  animation: phoneFloat 2.5s ease-in-out infinite;
+}
+
+.floating-phone i {
+
+  font-size: 20px;
+}
+
+.floating-phone:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.03);
+
+  box-shadow:
+    0 20px 50px rgba(31,143,85,0.35);
+
+  color: #fff;
+}
+
+/* 呼吸动画 */
+
+@keyframes phoneFloat {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* 手机端 */
+
+@media (max-width: 768px) {
+
+  .floating-phone {
+
+    right: 16px;
+    bottom: 16px;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+  }
+
+  .floating-phone span {
+
+    display: none;
+  }
+
+}
