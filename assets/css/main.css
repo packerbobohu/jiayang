@@ -1793,7 +1793,7 @@ background:
   transition: all 0.3s ease-in-out;
   width: 100%;
   height: auto;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .team .team-member .member-info h4 {
@@ -1827,7 +1827,7 @@ background:
   gap: 15px;
 }
 
-.team .team-member .member-info .social a {
+.team .team-member .member-info  a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1849,7 +1849,7 @@ background:
 
 .team .team-member:hover .member-img img {
   transform: scale(1.05);
-  filter: grayscale(0%);
+  /* filter: grayscale(0%); */
 }
 
 @media (max-width: 992px) {
@@ -4904,4 +4904,24 @@ button {
 
         font-size: 28px;
     }
+}
+/* 关闭图片悬浮高亮效果 */
+img:hover,
+.team section:hover img,
+.portfolio-item:hover img,
+.gallery-item:hover img,
+.project-item:hover img {
+    transform: none !important;
+    scale: 1 !important;
+    opacity: 1 !important;
+    filter: none !important;
+    box-shadow: none !important;
+}
+
+/* 去掉悬浮遮罩层 */
+.portfolio-info,
+.portfolio-overlay,
+.overlay,.team section,
+.hover-overlay {
+    display: none !important;
 }
