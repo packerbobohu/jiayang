@@ -60,30 +60,6 @@
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
-body {
-  background:
-    radial-gradient(circle at top left,
-      rgba(86, 194, 113, 0.1) 0%,
-      rgba(255,255,255,1) 38%),
-
-    radial-gradient(circle at bottom right,
-      rgba(31,143,85,0.08) 0%,
-      rgba(255,255,255,1) 42%),
-
-    linear-gradient(
-      135deg,
-      #f4fbf6 0%,
-      #ffffff 45%,
-      #f7fcf8 100%
-    );
-
-  background-attachment: fixed;
-  color: #4b5563;
-}
-
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -2554,7 +2530,8 @@ background:
 }
 
 .portfolio-details .project-showcase .showcase-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: white;
+  background-color:transparent;
+  /* background-color: white; */
   transform: scale(1.2);
 }
 
@@ -4657,4 +4634,274 @@ body {
 .back-to-top,
 .scroll-top {
     display: none !important;
+}
+
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+/* ===== 全站环保科技背景 ===== */
+
+html,
+body {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(28,200,160,0.10),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at left bottom,
+            rgba(23,139,104,0.08),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #F4FAF7 0%,
+            #F8FCFA 45%,
+            #EEF7F3 100%
+        );
+
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
+    color: #18342D;
+}
+
+/* 防止白色覆盖 */
+
+main,
+section,
+.page-wrapper,
+.content-wrapper,
+.bg-light {
+    background: transparent !important;
+}
+/* 页面科技感 */
+
+body::before {
+    content: '';
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(28, 200, 160, 0.05),
+            transparent 20%
+        ),
+
+        radial-gradient(
+            circle at 80% 60%,
+            rgba(0, 255, 170, 0.04),
+            transparent 25%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+section {
+    background: transparent;
+}.btn,
+button {
+    background:
+        linear-gradient(
+            135deg,
+            #178B68,
+            #1CC8A0
+        );
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    box-shadow:
+        0 6px 18px rgba(28,200,160,0.22);
+}
+
+
+/* =========================================
+   服务卡片高级环保科技风
+========================================= */
+
+.service-item,
+.feature-box,
+.card {
+
+    background: rgba(255,255,255,0.72);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.05),
+        0 4px 12px rgba(28,200,160,0.08);
+
+    transition: all 0.35s ease;
+
+    overflow: hidden;
+
+    position: relative;
+}
+.service-item:hover,
+.feature-box:hover,
+.card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.08),
+        0 8px 24px rgba(28,200,160,0.18);
+
+    border-color: rgba(28,200,160,0.25);
+}
+.service-item::before,
+.card::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: -80px;
+    right: -80px;
+
+    width: 180px;
+    height: 180px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(28,200,160,0.10),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.service-item h3,
+.card-title {
+
+    color: #18342D;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    font-size: 28px;
+}
+.service-item p,
+.card p {
+
+    color: #6C7F78;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+}
+.service-item .icon,
+.card .icon {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #178B68,
+            #1CC8A0
+        );
+
+    box-shadow:
+        0 8px 20px rgba(28,200,160,0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-item .icon i,
+.card .icon i {
+
+    color: #fff;
+
+    font-size: 34px;
+}
+.service-item a,
+.card a {
+
+    color: #178B68;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+.service-item a:hover,
+.card a:hover {
+
+    color: #1CC8A0;
+
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   手机端高级适配
+========================================= */
+
+@media (max-width: 768px) {
+
+    .service-item,
+    .feature-box,
+    .card {
+
+        padding: 28px 24px;
+
+        border-radius: 20px;
+    }
+
+    .service-item h3,
+    .card-title {
+
+        font-size: 24px;
+
+        margin-top: 18px;
+    }
+
+    .service-item p,
+    .card p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .service-item .icon,
+    .card .icon {
+
+        width: 72px;
+        height: 72px;
+    }
+
+    .service-item .icon i,
+    .card .icon i {
+
+        font-size: 28px;
+    }
 }
