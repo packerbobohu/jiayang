@@ -608,6 +608,7 @@ h6 {
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
+  
 }
 
 .scroll-top i {
@@ -4588,7 +4589,7 @@ body {
   .floating-service {
 
     right: 16px;
-    bottom: 20px;
+    bottom: 40px;
   }
 
   .floating-service .service-item {
@@ -4652,4 +4653,8 @@ body {
   display: block;
 
   border-radius: 12px;
+}
+.back-to-top,
+.scroll-top {
+    display: none !important;
 }
