@@ -1157,7 +1157,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     message: document.getElementById('message').value
   };
   console.log('Submitting form with data:', data);
-  const res = await fetch('/submit', {
+  const res = await fetch('/api/submit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
