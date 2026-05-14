@@ -26,12 +26,12 @@ export async function onRequestPost(context) {
 
   .bind(
 
-    name,
-    phone,
-    address,
-    service,
-    message
-
+    // name,
+    // phone,
+    // address,
+    // service,
+    // message
+'hulbo','13155245563','hebeis','四害治理','sssssssssssssssssss'
   )
 
   .run();
