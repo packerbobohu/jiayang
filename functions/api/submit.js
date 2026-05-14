@@ -1,5 +1,63 @@
-export function onRequest() {
+export async function onRequestPost(context) {
 
-  return new Response("hello functions");
+  const { request, env } = context;
+
+  try {
+
+    // 获取前端提交数据
+
+    const data = await request.json();
+
+    const {
+
+      name,
+      phone,
+      address,
+      service,
+      message
+
+    } = data;
+
+    // 写入 D1
+
+    const result = await env.DB.prepare(
+
+      `INSERT INTO customers
+      (name, phone, address, service, message)
+      VALUES (?, ?, ?, ?, ?)`
+
+    )
+
+    .bind(
+
+      name,
+      phone,
+      address,
+      service,
+      message
+
+    )
+
+    .run();
+
+    return Response.json({
+
+      success: true,
+
+      result
+
+    });
+
+  } catch(err) {
+
+    return Response.json({
+
+      success: false,
+
+      error: err.message
+
+    });
+
+  }
 
 }
