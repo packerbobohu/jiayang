@@ -1,6 +1,1 @@
-Thanks for downloading this template!
-
-Template Name: Axis
-Template URL: https://bootstrapmade.com/axis-bootstrap-corporate-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+1、项目网站生成，主要用于企业的门户网站
