@@ -102,8 +102,10 @@
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
 
+  if(window){
+  window.addEventListener('load', aosInit);
+}
   /**
    * Initiate glightbox
    */

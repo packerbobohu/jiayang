@@ -1,0 +1,10 @@
+name = "jiayang"
+
+pages_build_output_dir = "./"
+
+compatibility_date = "2026-05-13"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "jiayang-db"
+database_id = "d309bec4-e779-4761-8c2b-8a774e4e7d90"
