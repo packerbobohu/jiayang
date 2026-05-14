@@ -1,50 +1,46 @@
 export async function onRequestPost(context) {
 
-  const { request, env } = context;
+  const { env } = context;
 
-  const data = await request.json();
+  try {
 
-  const {
+    // 插入测试数据
 
-    name,
-    phone,
-    address,
-    service,
-    message
+    const result = await env.DB.prepare(
 
-  } = data;
+      `INSERT INTO customers
+      (name, phone)
+      VALUES (?, ?)`
 
-  // 保存数据库
+    )
 
-  await env.DB.prepare(
+    .bind(
 
-    `INSERT INTO customers
-    (name, phone, address, service, message)
-    VALUES (?, ?, ?, ?, ?)`
+      '张三',
+      '13800000000'
 
-  )
+    )
 
-  .bind(
+    .run();
 
-    // name,
-    // phone,
-    // address,
-    // service,
-    // message
-'hulbo','13155245563','hebeis','四害治理','sssssssssssssssssss'
-  )
+    return Response.json({
 
-  .run();
-  return Response.json({
-    success: true,
-    message: "提交成功"
-  });
-  // 邮件通知（后面会讲）
+      success: true,
 
-  return Response.json({
+      result
 
-    success: true
+    });
 
-  });
+  } catch(err) {
+
+    return Response.json({
+
+      success: false,
+
+      error: err.message
+
+    });
+
+  }
 
 }
