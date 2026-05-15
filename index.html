@@ -1170,6 +1170,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   //   success: true
   // };
   const result = await res.json();
+  console.log('Received response from server:', result);
   if(result.success){
     alert('提交成功，我们会尽快联系您');
   }
