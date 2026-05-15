@@ -1205,7 +1205,8 @@
       if (data.name.length < 2) {
 
         alert('姓名至少2个汉字');
-        input.style.borderColor = 'red';
+        // alert(data.name.length + '姓名至少2个汉字')
+        // input.style.borderColor = 'red';
         return;
       }
 
@@ -1223,7 +1224,7 @@
       if (!phoneReg.test(data.phone)) {
 
         alert('手机号格式不正确');
-        input.style.borderColor = 'red';
+        // input.style.borderColor = 'red';
         return;
       }
       if (!data.address) {
