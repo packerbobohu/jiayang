@@ -996,13 +996,13 @@ document.addEventListener('click', function(e) {
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>姓名</label>
-                      <input type="text" id="name" required="">
+                      <input type="text" id="name" required="" placeholder="请输入姓名">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>电话</label>
-                      <input type="tel" id="phone" required="">
+                      <input type="tel" id="phone" required="" placeholder="请输入电话">
                     </div>
                   </div>
                 </div>
@@ -1010,7 +1010,7 @@ document.addEventListener('click', function(e) {
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>住址</label>
-                      <input type="text" id="address" required="">
+                      <input type="text" id="address" required="" placeholder="请输入区域住址">
                     </div>
                   </div>
                   
@@ -1156,7 +1156,47 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     service: document.getElementById('service').value,
     message: document.getElementById('message').value
   };
-  console.log('Submitting form with data:', data);
+    // =========================
+    // 表单验证
+    // =========================
+
+    // 姓名验证
+    if (!name) {
+
+        alert('请输入姓名')
+
+        return
+    }
+
+    if (name.length < 2) {
+
+        alert('姓名至少2个汉字')
+        nameInput.style.borderColor = 'red'
+        return
+    }
+
+    // 手机号验证
+    const phoneReg =
+      /^1[3-9]\d{9}$/
+
+    if (!phone) {
+
+        alert('请输入手机号')
+
+        return
+    }
+
+    if (!phoneReg.test(phone)) {
+
+        alert('手机号格式不正确')
+        phoneInput.style.borderColor = 'red'
+        return
+    }
+
+
+
+
+  // console.log('Submitting form with data:', data);
   const res = await fetch('/api/submit', {
     method: 'POST',
     headers: {
@@ -1173,6 +1213,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   // console.log('Received response from server:', result);
   if(result.success){
     alert('提交成功，我们会尽快联系您');
+     form.reset();
   }
 });
 }

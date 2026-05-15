@@ -13,7 +13,17 @@ if (request.method === 'POST') {
         const address = data.address;
         const service = data.service;
         const message = data.message;
-        
+        if (!data.name) {
+          return Response.json({
+              success:false,
+              error:'姓名不能为空'
+           })
+        }if (!data.phone) {
+          return Response.json({
+              success:false,
+              error:'手机号不能为空'
+           })
+        }
     // const {
 
     //   name,
