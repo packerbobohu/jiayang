@@ -1073,7 +1073,7 @@
                   <div class="sent-message">您的消息已发送。谢谢！</div>
                 </div>
 
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" id="submitBtn">
                   <span>发送信息</span>
                   <i class="bi bi-arrow-right"></i>
                 </button>
@@ -1180,6 +1180,13 @@
 
 </body>
 <script>
+
+  const form =
+    document.getElementById('contact-form')
+
+  const submitBtn =
+    document.getElementById('submitBtn')
+
   if (document.getElementById('contact-form')) {
     document.getElementById('contact-form').addEventListener('submit', async function (e) {
 
@@ -1234,7 +1241,9 @@
         return;
       }
 
+      submitBtn.disabled = true
 
+      submitBtn.innerText = '提交中...'
       try {
         // console.log('Submitting form with data:', data);
         const res = await fetch('/api/submit', {
@@ -1263,7 +1272,7 @@
         alert('网络异常');
 
       } finally {
-        
+
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
