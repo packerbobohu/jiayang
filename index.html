@@ -1165,12 +1165,12 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     body: JSON.stringify(data)
 
   });
-  console.log(await res.json());
+  // console.log(await res.json());
   //  const result = {
   //   success: true
   // };
   const result = await res.json();
-  console.log('Received response from server:', result);
+  // console.log('Received response from server:', result);
   if(result.success){
     alert('提交成功，我们会尽快联系您');
   }
