@@ -4925,7 +4925,6 @@ img:hover,
 .hover-overlay {
     display: none !important;
 }
-
 .footer{
 
     background:
@@ -4938,7 +4937,7 @@ img:hover,
     color:#fff;
 
     padding:
-      80px 0 30px;
+      80px 20px 30px;
 
     margin-top:80px;
 
@@ -4946,7 +4945,7 @@ img:hover,
 
 .footer-container{
 
-    width:90%;
+    width:100%;
 
     max-width:1200px;
 
@@ -4958,21 +4957,29 @@ img:hover,
 
     align-items:flex-start;
 
+    gap:50px;
+
     flex-wrap:wrap;
 
-    gap:40px;
+}
+
+.footer-logo{
+
+    flex:1;
+
+    min-width:280px;
 
 }
 
 .footer-logo h2{
 
-    font-size:28px;
+    font-size:30px;
 
     font-weight:700;
 
     margin-bottom:20px;
 
-    letter-spacing:1px;
+    line-height:1.4;
 
 }
 
@@ -4987,9 +4994,15 @@ img:hover,
 
 }
 
+.footer-contact{
+
+    min-width:220px;
+
+}
+
 .footer-contact p{
 
-    margin-bottom:12px;
+    margin-bottom:14px;
 
     color:
       rgba(255,255,255,.8);
@@ -5000,7 +5013,7 @@ img:hover,
 
 .footer-bottom{
 
-    width:90%;
+    width:100%;
 
     max-width:1200px;
 
@@ -5015,6 +5028,8 @@ img:hover,
 
     justify-content:space-between;
 
+    align-items:center;
+
     flex-wrap:wrap;
 
     gap:20px;
@@ -5027,5 +5042,66 @@ img:hover,
       rgba(255,255,255,.55);
 
     font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/* =========================
+   手机端适配
+========================= */
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding:
+          60px 20px 30px;
+
+    }
+
+    .footer-container{
+
+        flex-direction:column;
+
+        gap:35px;
+
+    }
+
+    .footer-logo h2{
+
+        font-size:24px;
+
+    }
+
+    .footer-logo p{
+
+        font-size:14px;
+
+    }
+
+    .footer-contact p{
+
+        font-size:14px;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+        margin-top:40px;
+
+    }
+
+    .footer-bottom p{
+
+        font-size:13px;
+
+    }
 
 }
