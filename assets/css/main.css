@@ -990,7 +990,7 @@ background:
 # About Section
 --------------------------------------------------------------*/
 .about {
-  padding-top: 120px;
+  padding-top: 30px;
   padding-bottom: 120px;
 }
 
@@ -2211,7 +2211,7 @@ background:
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  padding: 120px 0 100px;
+  padding: 30px 0 100px;
 }
 
 .contact .info-item {
