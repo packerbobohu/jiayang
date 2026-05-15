@@ -5,18 +5,15 @@ export async function onRequestPost(context) {
   try {
 
     // 获取前端提交数据
-
-    const data = await request.json();
-
+    const formData = await request.formData()
+    // const data = await request.json();
     const {
-
-      name,
-      phone,
-      address,
-      service,
-      message
-
-    } = data;
+      name = formData.get('name'),
+      phone = formData.get('phone'),
+      address = formData.get('address'),
+      service = formData.get('service'),
+      message = formData.get('message')
+    } = formData;
 
     // 写入 D1
 
