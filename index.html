@@ -990,19 +990,19 @@ document.addEventListener('click', function(e) {
                 <h3>提交您的需求</h3>
               </div>
 
-              <form id="contact-form" method="post" class="php-email-form">
+              <form id="contact-form" method="post" class="php-email-form" novalidate>
 
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>姓名</label>
-                      <input type="text" id="name" required="" placeholder="请输入姓名">
+                      <input type="text" id="name"  placeholder="请输入姓名">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>电话</label>
-                      <input type="tel" id="phone" required="" placeholder="请输入电话">
+                      <input type="tel" id="phone"  placeholder="请输入电话">
                     </div>
                   </div>
                 </div>
@@ -1010,7 +1010,7 @@ document.addEventListener('click', function(e) {
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>住址</label>
-                      <input type="text" id="address" required="" placeholder="请输入区域住址">
+                      <input type="text" id="address"  placeholder="请输入区域住址">
                     </div>
                   </div>
                   
@@ -1030,7 +1030,7 @@ document.addEventListener('click', function(e) {
 
                 <div class="form-group">
                   <label for="projectMessage">详细描述</label>
-                  <textarea name="message" id="message" rows="5" required=""></textarea>
+                  <textarea name="message" id="message" rows="5" ></textarea>
                 </div>
 
                 <div class="my-3">
