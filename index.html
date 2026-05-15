@@ -1263,7 +1263,11 @@
         alert('网络异常');
 
       } finally {
-
+        
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
         submitBtn.disabled = false;
         submitBtn.innerText = '立即提交';
       }
