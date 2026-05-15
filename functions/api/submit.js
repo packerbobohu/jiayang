@@ -3,7 +3,6 @@ export async function onRequestPost(context) {
   const { request, env } = context;
 if (request.method === 'POST') {
   try {
-
     // 获取前端提交数据
     const formData = await request.json()
     // const data = await request.json();
@@ -14,6 +13,7 @@ if (request.method === 'POST') {
       service = formData.get('service');
       message = formData.get('message');
     // } = formData;
+console.log('Received POST request with body:', formData);
 
     // 写入 D1
 
