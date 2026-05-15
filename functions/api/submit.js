@@ -3,17 +3,26 @@ export async function onRequestPost(context) {
   const { request, env } = context;
 if (request.method === 'POST') {
   try {
+
     // 获取前端提交数据
-    const formData = await request.json()
-    // const data = await request.json();
+
+    const data = await request.json();
+
+        const name = data.name;
+        const phone = data.phone;
+        const address = data.address;
+        const service = data.service;
+        const message = data.message;
+        
     // const {
-      names = formData.get('name');
-      phone = formData.get('phone');
-      address = formData.get('address');
-      service = formData.get('service');
-      message = formData.get('message');
-    // } = formData;
-console.log('Received POST request with body:', formData);
+
+    //   name,
+    //   phone,
+    //   address,
+    //   service,
+    //   message
+
+    // } = data;
 
     // 写入 D1
 
@@ -26,12 +35,15 @@ console.log('Received POST request with body:', formData);
     )
 
     .bind(
-      names,
+
+      name,
       phone,
       address,
       service,
       message
+
     )
+
     .run();
 
     return Response.json({
@@ -51,8 +63,9 @@ console.log('Received POST request with body:', formData);
       error: err.message
 
     });
+  }
+    return new Response('API OK')
 
   }
 
-}
 }
