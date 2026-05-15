@@ -1235,28 +1235,41 @@
       }
 
 
+      try {
+        // console.log('Submitting form with data:', data);
+        const res = await fetch('/api/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
 
-      // console.log('Submitting form with data:', data);
-      const res = await fetch('/api/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+        });
+        // console.log(await res.json());
+        //  const result = {
+        //   success: true
+        // };
+        const result = await res.json();
+        // console.log('Received response from server:', result);
+        if (result.success) {
+          alert('提交成功，我们会尽快联系您');
+          form.reset();
+        } else {
+          alert(result.error || '提交失败，请稍后再试');
+        }
+      } catch (err) {
 
-      });
-      // console.log(await res.json());
-      //  const result = {
-      //   success: true
-      // };
-      const result = await res.json();
-      // console.log('Received response from server:', result);
-      if (result.success) {
-        alert('提交成功，我们会尽快联系您');
-        form.reset();
+        console.error(err);
+        alert('网络异常');
+
+      } finally {
+
+        submitBtn.disabled = false;
+        submitBtn.innerText = '立即提交';
       }
-    });
+    })
   }
+
 </script>
 
 </html>
