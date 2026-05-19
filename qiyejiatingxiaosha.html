@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>服务详情</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<div class="floating-service">
+
+  <!-- 电话 -->
+
+  <a href="tel:15630073617" class="service-item">
+    <i class="bi bi-telephone-fill"></i>
+    <span>电话咨询</span>
+  </a>
+
+  <!-- 微信 -->
+  <!-- 
+  <div class="service-item wechat-box" onclick="toggleWechat()">
+    <i class="bi bi-wechat"></i>
+
+    <span>微信咨询</span>
+
+    <div class="wechat-popup">
+
+      <img src="assets/img/wechat (1).jpg" alt="微信二维码">
+
+      <p>扫码添加微信</p>
+
+    </div>
+
+  </div> -->
+
+  <!-- 返回顶部 -->
+
+  <a href="#" class="service-item back-top">
+
+    <i class="bi bi-arrow-up"></i>
+
+    <span>返回顶部</span>
+
+  </a>
+
+</div>
+<script>
+
+  function toggleWechat() {
+
+    const popup = document.querySelector('.wechat-popup');
+
+    popup.classList.toggle('show');
+  }
+
+  /* 点击页面其它区域关闭 */
+
+  document.addEventListener('click', function (e) {
+
+    const wechatBox = document.querySelector('.wechat-box');
+
+    if (wechatBox && !wechatBox.contains(e.target)) {
+
+      document
+        .querySelector('.wechat-popup')
+        .classList.remove('show');
+    }
+
+  });
+
+</script>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/log.webp" alt="河北嘉扬净居">
+        <h1 class="sitename">河北嘉扬净居环保科技有限公司</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/#hero" class="active">首页</a></li>
+          <li><a href="/#about">关于我们</a></li>
+          <li><a href="/#services">核心服务</a></li>
+          <li><a href="/#portfolio">治理案例</a></li>
+          <li><a href="/#contact">联系我们</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-phone">
+
+        <i class="bi bi-telephone-fill"></i>
+
+        <span>156-3007-3617</span>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="breadcrumbs">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> 首页</a></li>
+            <li class="breadcrumb-item"><a href="#">核心服务</a></li>
+            <li class="breadcrumb-item active current">服务详情</li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="title-wrapper">
+        <h1>企业/家庭消毒消杀</h1>
+        <!-- <p>围绕新房装修、办公空间及商业场所空气污染问题，提供专业空气检测、除甲醛治理、TVOC净化及异味处理等室内环境治理服务，采用科学检测与环保治理方案，有效降低甲醛、苯系物及有害挥发性气体浓度，持续改善室内空气质量，为家庭、企业及商业空间打造更加健康、安全、舒适的空气环境。</p> -->
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+
+            <div class="service-content">
+              <div class="container py-5">
+                <div class="row g-4">
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid case-img">
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid case-img">
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid case-img">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid case-img">
+                  </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid case-img">
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid case-img">
+                  </div>
+
+
+
+                </div>
+              </div>
+
+              <div class="service-description" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="service-title">企业/家庭消毒消杀</h2>
+                <p>
+                  &emsp;&emsp;针对河北邯郸地区的新房装修、办公场所及商业空间，通过“检测—治理—净化—复检”标准化服务流程，针对甲醛、TVOC、苯系物及异味污染源进行系统治理，结合光触媒、生物酶净化及空间消毒技术，持续提升室内空气品质，为住宅、办公及商业空间提供长期稳定的健康空气解决方案。
+                </p>
+              </div>
+
+              <div class="service-process" data-aos="fade-up" data-aos-delay="900">
+                <h3>服务流程</h3>
+
+                <div class="process-timeline">
+                  <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                      <h4>现场勘察 &amp; 污染评估</h4>
+                      <p>
+                        专业技术人员上门后，首先对室内整体环境进行全面勘察，主要了解装修时间、家具材质、板材种类、空间面积及通风条件，判断甲醛、TVOC、苯系物等污染物的主要来源。重点检查衣柜、橱柜、地板、木门、墙面及软装区域，分析污染释放强度及后期治理难度，并根据现场情况制定针对性的治理方案与施工计划。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                      <h4>空气质量检测</h4>
+                      <p>
+                        在门窗封闭12小时以上的条件下，使用专业空气检测设备对室内空气进行多点采样检测，重点检测甲醛、TVOC、苯、甲苯、二甲苯及氨等污染指标。检测区域通常包括客厅、卧室、儿童房、会议室等重点空间，通过数据分析形成空气质量检测报告，明确污染等级、超标倍数及后续治理重点。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                      <h4>施工前保护处理</h4>
+                      <p>
+                        为避免施工过程中药剂对电器、食品及贵重物品造成影响，施工前会对现场进行全面保护处理。包括覆盖家电设备、隔离食品及生活用品、保护贵重家具表面，并对部分不适合喷涂区域进行遮挡，确保治理施工安全、规范、无二次污染。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                      <h4>深度清洁除尘</h4>
+                      <p>
+                        施工人员会对柜体、家具、地板、墙角及室内死角进行深度除尘与表面清洁，去除装修残留粉尘及附着杂质。由于灰尘会影响治理药剂的附着与渗透效果，因此深度清洁是保证后续治理效果的重要基础步骤，可有效提升药剂分解效率与持续净化能力。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                      <h4>甲醛治理施工</h4>
+                      <p>
+                        这是整个治理流程中的核心阶段，施工人员会根据污染源类型采用针对性治理工艺，包括光触媒喷涂、生物酶分解、封闭剂处理及TVOC专项净化等方式。重点对家具板材、墙面、木门、窗帘及软装区域进行全面治理，从源头分解甲醛及有害挥发性气体，并降低异味及持续释放风险。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="process-step">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                      <h4>复检验收</h4>
+                      <p>
+                        在治理完成并通风一定周期后，再次对室内空气进行专业复检。通过检测甲醛、TVOC、苯系物等指标，确认治理效果是否达到国家室内空气质量标准，并形成复检验收报告，确保客户可安全入住或投入使用。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="process-step">
+                    <div class="step-number">07</div>
+                    <div class="step-content">
+                      <h4>长期维护与空气管理</h4>
+                      <p>
+                        治理完成后，技术人员会根据空间情况提供长期空气管理建议，包括持续通风方案、空气净化器配置建议、夏季高温释放管理及定期复检周期等。对于板材较多或长期密闭空间，还会建议定期进行空气质量复查，以保持室内空气长期稳定达标。
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+
+            <div class="service-sidebar">
+
+              <div class="sidebar-widget service-info" data-aos="fade-up" data-aos-delay="200">
+                <h4>治理方式</h4>
+                <ul class="service-details-list">
+                  <li><strong>施工阶段:</strong> 1~3天</li>
+                  <li><strong>深度清洁:</strong> 去除灰尘、增强药剂附着</li>
+                  <li><strong>甲醛治理:</strong> 光触媒、生物酶治理, 封闭剂施工,TVOC净化</li>
+                  <li><strong>消毒消杀:</strong> 雾化消毒,空间喷洒, 臭氧消毒, ULV超低容量喷雾</li>
+                  <li><strong>通风阶段:</strong> 治理后:24~72小时 持续通风</li>
+                  <li><strong>复检阶段:</strong> 3~7天后进行复检</li>
+                  <li><strong>长期维护阶段:</strong> 定期复检 半年~1年</li>
+                </ul>
+              </div>
+
+              <div class="sidebar-widget related-services" data-aos="fade-up" data-aos-delay="300">
+                <h4>检测项目</h4>
+                <div class="related-service-list">
+                  <a href="#" class="related-service-item">
+                    <i class="bi bi-bucket"></i>
+                    <span>甲醛 核心污染</span>
+                  </a>
+                  <a href="#" class="related-service-item">
+                    <i class="bi bi-wind"></i>
+                    <span>TVOC 挥发性有机物</span>
+                  </a>
+                  <a href="#" class="related-service-item">
+                    <i class="bi bi-virus"></i>
+                    <span>苯系物 装修污染</span>
+                  </a>
+                  <a href="#" class="related-service-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span>氨 刺激性气体</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- <div class="sidebar-widget cta-widget" data-aos="fade-up" data-aos-delay="400">
+                <div class="cta-content">
+                  <h4>Ready to Get Started?</h4>
+                  <p>Let's discuss how our digital marketing expertise can help grow your business.</p>
+                  <a href="#" class="btn-cta">Schedule Consultation</a>
+                </div>
+              </div> -->
+
+              <!-- <div class="sidebar-widget contact-info" data-aos="fade-up" data-aos-delay="500">
+                <h4>Need Help?</h4>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <div>
+                    <strong>Call Us</strong>
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <div>
+                    <strong>Email</strong>
+                    <span>info@example.com</span>
+                  </div>
+                </div>
+              </div> -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section> <!--/Service Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="footer-container">
+
+      <div class="footer-logo">
+
+        <h2>
+          河北嘉扬净居环保科技有限公司
+        </h2>
+
+        <h6>
+          专注室内空气治理 · 消毒消杀 · 环境净化服务
+        </h6>
+
+      </div>
+
+      <div class="footer-contact">
+
+        <p>
+          服务热线：156-3007-3617
+        </p>
+
+        <p>
+          中国 · 河北
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 河北嘉扬净居环保科技有限公司
+        All Rights Reserved.
+      </p>
+      <p>
+        技术支持 · 嘉扬科技
+      </p>
+
+      <p>
+        Dedicated to Healthy Indoor Environments
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

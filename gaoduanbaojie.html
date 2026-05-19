@@ -28,6 +28,68 @@
 
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
+<div class="floating-service">
+
+  <!-- 电话 -->
+
+  <a href="tel:15630073617" class="service-item">
+    <i class="bi bi-telephone-fill"></i>
+    <span>电话咨询</span>
+  </a>
+
+  <!-- 微信 -->
+  <!-- 
+  <div class="service-item wechat-box" onclick="toggleWechat()">
+    <i class="bi bi-wechat"></i>
+
+    <span>微信咨询</span>
+
+    <div class="wechat-popup">
+
+      <img src="assets/img/wechat (1).jpg" alt="微信二维码">
+
+      <p>扫码添加微信</p>
+
+    </div>
+
+  </div> -->
+
+  <!-- 返回顶部 -->
+
+  <a href="#" class="service-item back-top">
+
+    <i class="bi bi-arrow-up"></i>
+
+    <span>返回顶部</span>
+
+  </a>
+
+</div>
+<script>
+
+  function toggleWechat() {
+
+    const popup = document.querySelector('.wechat-popup');
+
+    popup.classList.toggle('show');
+  }
+
+  /* 点击页面其它区域关闭 */
+
+  document.addEventListener('click', function (e) {
+
+    const wechatBox = document.querySelector('.wechat-box');
+
+    if (wechatBox && !wechatBox.contains(e.target)) {
+
+      document
+        .querySelector('.wechat-popup')
+        .classList.remove('show');
+    }
+
+  });
+
+</script>
 
 <body class="service-details-page">
 
@@ -74,7 +136,7 @@
       </div>
 
       <div class="title-wrapper">
-        <h1>甲醛/VOC净化</h1>
+        <h1>高端保洁</h1>
         <!-- <p>围绕新房装修、办公空间及商业场所空气污染问题，提供专业空气检测、除甲醛治理、TVOC净化及异味处理等室内环境治理服务，采用科学检测与环保治理方案，有效降低甲醛、苯系物及有害挥发性气体浓度，持续改善室内空气质量，为家庭、企业及商业空间打造更加健康、安全、舒适的空气环境。</p> -->
       </div>
     </div><!-- End Page Title -->
@@ -114,95 +176,17 @@
                     <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid case-img">
                   </div>
 
-                  <div class="col-lg-4 col-md-6">
-                    <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid case-img">
-                  </div>
+
 
                 </div>
               </div>
-
-
-              <!-- <div class="service-hero" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/services/services-1.webp" alt="Digital Marketing Strategy"
-                  class="img-fluid service-image">
-              </div> 
-              <div class="service-hero" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/services/services-1.webp" alt="Digital Marketing Strategy"
-                  class="img-fluid service-image">
-              </div> -->
 
               <div class="service-description" data-aos="fade-up" data-aos-delay="300">
-                <h2 class="service-title">甲醛 / VOC净化服务</h2>
-                <!-- <p class="lead">Empowering your business with data-driven digital marketing solutions that deliver
-                  measurable results and sustainable growth across all digital channels.</p> -->
-
+                <h2 class="service-title">高端保洁</h2>
                 <p>
-                  针对河北邯郸地区的新房装修、办公场所及商业空间中甲醛、TVOC、苯系物等有害气体超标问题，提供专业空气检测与深度净化治理服务。采用环保型治理工艺，结合源头分解、持续净化与空气循环处理，有效降低室内污染物浓度，改善异味问题，提升空气质量，为家庭、企业及公共空间打造更加健康、安全、舒适的室内环境。
+                  &emsp;&emsp;针对河北邯郸地区的新房装修、办公场所及商业空间，通过“检测—治理—净化—复检”标准化服务流程，针对甲醛、TVOC、苯系物及异味污染源进行系统治理，结合光触媒、生物酶净化及空间消毒技术，持续提升室内空气品质，为住宅、办公及商业空间提供长期稳定的健康空气解决方案。
                 </p>
-
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                  anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                  doloremque laudantium.</p>
               </div>
-
-              <!-- <div class="service-features" data-aos="fade-up" data-aos-delay="400">
-                <h3>What We Deliver</h3>
-
-                <div class="row gy-4 mt-4">
-                  <div class="col-md-6">
-                    <div class="feature-item">
-                      <div class="feature-icon">
-                        <i class="bi bi-graph-up-arrow"></i>
-                      </div>
-                      <div class="feature-content">
-                        <h4>Performance Analytics</h4>
-                        <p>Comprehensive tracking and analysis of all marketing campaigns with detailed ROI reporting
-                          and actionable insights.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="feature-item">
-                      <div class="feature-icon">
-                        <i class="bi bi-bullseye"></i>
-                      </div>
-                      <div class="feature-content">
-                        <h4>Target Audience Research</h4>
-                        <p>In-depth market research to identify and understand your ideal customers for precise
-                          targeting strategies.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="feature-item">
-                      <div class="feature-icon">
-                        <i class="bi bi-palette"></i>
-                      </div>
-                      <div class="feature-content">
-                        <h4>Brand Development</h4>
-                        <p>Strategic brand positioning and visual identity development that resonates with your target
-                          market.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="feature-item">
-                      <div class="feature-icon">
-                        <i class="bi bi-lightning"></i>
-                      </div>
-                      <div class="feature-content">
-                        <h4>Campaign Optimization</h4>
-                        <p>Continuous monitoring and refinement of marketing campaigns to maximize performance and
-                          minimize costs.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
 
               <div class="service-process" data-aos="fade-up" data-aos-delay="900">
                 <h3>服务流程</h3>
@@ -211,38 +195,72 @@
                   <div class="process-step">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                      <h4>Discovery &amp; Analysis</h4>
-                      <p>We begin with a comprehensive audit of your current digital presence and competitive landscape
-                        analysis.</p>
+                      <h4>现场勘察 &amp; 污染评估</h4>
+                      <p>
+                        专业技术人员上门后，首先对室内整体环境进行全面勘察，主要了解装修时间、家具材质、板材种类、空间面积及通风条件，判断甲醛、TVOC、苯系物等污染物的主要来源。重点检查衣柜、橱柜、地板、木门、墙面及软装区域，分析污染释放强度及后期治理难度，并根据现场情况制定针对性的治理方案与施工计划。
+                      </p>
                     </div>
                   </div>
 
                   <div class="process-step">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                      <h4>Strategy Development</h4>
-                      <p>Based on our findings, we create a customized digital marketing strategy aligned with your
-                        business objectives.</p>
+                      <h4>空气质量检测</h4>
+                      <p>
+                        在门窗封闭12小时以上的条件下，使用专业空气检测设备对室内空气进行多点采样检测，重点检测甲醛、TVOC、苯、甲苯、二甲苯及氨等污染指标。检测区域通常包括客厅、卧室、儿童房、会议室等重点空间，通过数据分析形成空气质量检测报告，明确污染等级、超标倍数及后续治理重点。
+                      </p>
                     </div>
                   </div>
 
                   <div class="process-step">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                      <h4>Implementation</h4>
-                      <p>Our team executes the strategy across all relevant digital channels with precision and
-                        attention to detail.</p>
+                      <h4>施工前保护处理</h4>
+                      <p>
+                        为避免施工过程中药剂对电器、食品及贵重物品造成影响，施工前会对现场进行全面保护处理。包括覆盖家电设备、隔离食品及生活用品、保护贵重家具表面，并对部分不适合喷涂区域进行遮挡，确保治理施工安全、规范、无二次污染。
+                      </p>
                     </div>
                   </div>
 
                   <div class="process-step">
                     <div class="step-number">04</div>
                     <div class="step-content">
-                      <h4>Monitoring &amp; Optimization</h4>
-                      <p>Continuous performance tracking and data-driven optimizations to ensure maximum return on
-                        investment.</p>
+                      <h4>深度清洁除尘</h4>
+                      <p>
+                        施工人员会对柜体、家具、地板、墙角及室内死角进行深度除尘与表面清洁，去除装修残留粉尘及附着杂质。由于灰尘会影响治理药剂的附着与渗透效果，因此深度清洁是保证后续治理效果的重要基础步骤，可有效提升药剂分解效率与持续净化能力。
+                      </p>
                     </div>
                   </div>
+
+                  <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                      <h4>甲醛治理施工</h4>
+                      <p>
+                        这是整个治理流程中的核心阶段，施工人员会根据污染源类型采用针对性治理工艺，包括光触媒喷涂、生物酶分解、封闭剂处理及TVOC专项净化等方式。重点对家具板材、墙面、木门、窗帘及软装区域进行全面治理，从源头分解甲醛及有害挥发性气体，并降低异味及持续释放风险。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="process-step">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                      <h4>复检验收</h4>
+                      <p>
+                        在治理完成并通风一定周期后，再次对室内空气进行专业复检。通过检测甲醛、TVOC、苯系物等指标，确认治理效果是否达到国家室内空气质量标准，并形成复检验收报告，确保客户可安全入住或投入使用。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="process-step">
+                    <div class="step-number">07</div>
+                    <div class="step-content">
+                      <h4>长期维护与空气管理</h4>
+                      <p>
+                        治理完成后，技术人员会根据空间情况提供长期空气管理建议，包括持续通风方案、空气净化器配置建议、夏季高温释放管理及定期复检周期等。对于板材较多或长期密闭空间，还会建议定期进行空气质量复查，以保持室内空气长期稳定达标。
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
@@ -255,37 +273,40 @@
 
             <div class="service-sidebar">
 
-              <!-- <div class="sidebar-widget service-info" data-aos="fade-up" data-aos-delay="200">
-                <h4>Service Information</h4>
+              <div class="sidebar-widget service-info" data-aos="fade-up" data-aos-delay="200">
+                <h4>治理方式</h4>
                 <ul class="service-details-list">
-                  <li><strong>Duration:</strong> 3-6 months</li>
-                  <li><strong>Team Size:</strong> 5-8 specialists</li>
-                  <li><strong>Deliverables:</strong> Strategy document, implementation plan, monthly reports</li>
-                  <li><strong>Industries:</strong> E-commerce, SaaS, Healthcare, Finance</li>
+                  <li><strong>施工阶段:</strong> 1~3天</li>
+                  <li><strong>深度清洁:</strong> 去除灰尘、增强药剂附着</li>
+                  <li><strong>甲醛治理:</strong> 光触媒、生物酶治理, 封闭剂施工,TVOC净化</li>
+                  <li><strong>消毒消杀:</strong> 雾化消毒,空间喷洒, 臭氧消毒, ULV超低容量喷雾</li>
+                  <li><strong>通风阶段:</strong> 治理后:24~72小时 持续通风</li>
+                  <li><strong>复检阶段:</strong> 3~7天后进行复检</li>
+                  <li><strong>长期维护阶段:</strong> 定期复检 半年~1年</li>
                 </ul>
-              </div> -->
+              </div>
 
-              <!-- <div class="sidebar-widget related-services" data-aos="fade-up" data-aos-delay="300">
-                <h4>Related Services</h4>
+              <div class="sidebar-widget related-services" data-aos="fade-up" data-aos-delay="300">
+                <h4>检测项目</h4>
                 <div class="related-service-list">
                   <a href="#" class="related-service-item">
-                    <i class="bi bi-search"></i>
-                    <span>SEO Optimization</span>
+                    <i class="bi bi-bucket"></i>
+                    <span>甲醛 核心污染</span>
                   </a>
                   <a href="#" class="related-service-item">
-                    <i class="bi bi-megaphone"></i>
-                    <span>Social Media Marketing</span>
+                    <i class="bi bi-wind"></i>
+                    <span>TVOC 挥发性有机物</span>
                   </a>
                   <a href="#" class="related-service-item">
-                    <i class="bi bi-envelope"></i>
-                    <span>Email Marketing</span>
+                    <i class="bi bi-virus"></i>
+                    <span>苯系物 装修污染</span>
                   </a>
                   <a href="#" class="related-service-item">
-                    <i class="bi bi-graph-up"></i>
-                    <span>PPC Advertising</span>
+                    <i class="bi bi-shield-check"></i>
+                    <span>氨 刺激性气体</span>
                   </a>
                 </div>
-              </div> -->
+              </div>
 
               <!-- <div class="sidebar-widget cta-widget" data-aos="fade-up" data-aos-delay="400">
                 <div class="cta-content">
@@ -321,7 +342,7 @@
 
       </div>
 
-    </section><!-- /Service Details Section -->
+    </section> <!--/Service Details Section -->
 
   </main>
 
