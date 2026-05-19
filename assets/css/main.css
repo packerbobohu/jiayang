@@ -5171,10 +5171,15 @@ img:hover,
 
   font-size:20px;
 }
-@media(max-width:768px){
+
+.header-phone{
+  display:flex;
+}
+
+@media (max-width:991px){
 
   .header-phone{
-    display:none;
+    display:none !important;
   }
 
 }
